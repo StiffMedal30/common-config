@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/novaflow-users
-    username: ${DB-USERNAME}
-    password: ${DB-PASSWORD}
+    url: jdbc:postgresql://localhost:5432/novaflow
+    username: postgres
+    password: StiffMedal30
     driver-class-name: org.postgresql.Driver
