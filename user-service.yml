@@ -1,0 +1,5 @@
+datasource:
+  url: jdbc:postgresql://localhost:5432/novaflow-users
+  username: ${DB-USERNAME}
+  password: ${DB-PASSWORD}  # Use an environment variable for sensitive data
+  driver-class-name: org.postgresql.Driver
