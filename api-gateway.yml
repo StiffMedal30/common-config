@@ -6,16 +6,16 @@ spring:
       locator:
         enabled: true
     routes:
-      - id: auth-service-login
-        uri: lb://auth-service
+      - id: user-service-login
+        uri: lb://user-service
         predicates:
           - Path=/api/user/login
-      - id: auth-service-register
-        uri: lb://auth-service
+      - id: user-service-register
+        uri: lb://user-service
         predicates:
           - Path=/api/user/register
-      - id: auth-service-password-reset
-        uri: lb://auth-service
+      - id: user-service-password-reset
+        uri: lb://user-service
         predicates:
           - Path=/api/user/password/reset
   user:
