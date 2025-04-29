@@ -14,18 +14,19 @@ logging:
     org.springframework.security: DEBUG
     org.springframework.cloud.gateway: DEBUG
 
-liquibase:
-  enabled: true
-  change-log: db/db.changelog-master.yml
-  drop-first: false
+spring:
+  liquibase:
+    enabled: true
+    change-log: db/db.changelog-master.yml
+    drop-first: false
 
-jpa:
-  hibernate:
-    ddl-auto: update
-  show-sql: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
 
-datasource:
-  url: jdbc:postgresql://localhost:5432/novaflow
-  username: postgres
-  password: StiffMedal30  # Use an environment variable for sensitive data
-  driver-class-name: org.postgresql.Driver
+  datasource:
+    url: jdbc:postgresql://localhost:5432/novaflow
+    username: postgres
+    password: StiffMedal30  # Consider using env vars
+    driver-class-name: org.postgresql.Driver
