@@ -1,0 +1,23 @@
+spring:
+  gateway:
+    default-filters:
+      - AddRequestHeader=Authorization, ${http.request.header.Authorization}
+    discovery:
+      locator:
+        enabled: true
+    routes:
+      - id: user-service-login
+        uri: lb://user-service
+        predicates:
+          - Path=/api/user/login
+      - id: user-service-register
+        uri: lb://user-service
+        predicates:
+          - Path=/api/user/register
+      - id: user-service-password-reset
+        uri: lb://user-service
+        predicates:
+          - Path=/api/user/password/reset
+  user:
+    service:
+      url: http://localhost:8082

@@ -1,8 +1,8 @@
-# application.yml (in config repo)
+# application-dev.yml (in config repo)
 
 jwt:
   expiration: 3600000
-  secret: 'm0Y%3jF1s9d7@Lz8qWeR!8u6TxCvBnMzm0Y%3jF1s9d7@Lz8qWeR!8u6TxCvBnMz'
+  secret: ${JWT_SECRET}
 
 eureka:
   client:
@@ -24,9 +24,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
-
-  datasource:
-    url: jdbc:postgresql://localhost:5432/novaflow
-    username: postgres
-    password: StiffMedal30  # Consider using env vars
-    driver-class-name: org.postgresql.Driver
