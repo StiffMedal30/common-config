@@ -18,6 +18,10 @@ spring:
         uri: lb://user-service
         predicates:
           - Path=/api/user/password/reset
+      - id: user-service-account-activate
+        uri: lb://user-service
+        predicates:
+          - Path=/api/link/redirect/activate
   user:
     service:
       url: http://localhost:8082
